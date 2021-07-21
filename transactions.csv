@@ -1,4 +1,0 @@
-txn
-'{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_state", "account_id": "nearoverflow.testnet", "finality": "final", "prefix_base64": ""}}'
-'{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_account", "account_id": "nearoverflow.testnet", "finality": "final"}}'
-'{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_access_key_list", "account_id": "nearoverflow.testnet", "finality": "final"}}'

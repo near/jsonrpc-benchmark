@@ -1,0 +1,15 @@
+---
+
+concurrency: 4
+base: 'http://34.91.236.50:3030'
+iterations: 3000
+rampup: 5
+
+plan:
+  - name: View access key list
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_access_key_list", "account_id": "nearoverflow.testnet", "finality": "final"}}'
+      headers:
+        Content-Type: 'application/json'
