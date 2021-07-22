@@ -40,7 +40,7 @@ Before writing a drill config we've investigated (manually) the logs of nginx on
 
 It was decided to go with those three. Also we've added `view_call` to call view method of some contract. We choose an existing account with contract and small (not empty) state.
 
-During the benchmark we're sending each of the three query requests
+During the benchmark we're sending each of the four query requests and **the main metric currently is requests per second (rps)**
 
 ## Benchmark results we've got
 
