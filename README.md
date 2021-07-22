@@ -25,7 +25,8 @@
 
     ```bash
     $ cd jsonrpc-benchmark/
-    $ drill --benchmark benchmark.yml --stats
+    $ chmod a+x run.sh
+    $ URL="http://localhost:3030" ./run.sh
     ```
 
 ## Reasoning for chosen methods to benchmark
