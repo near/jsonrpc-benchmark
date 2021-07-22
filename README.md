@@ -26,7 +26,8 @@
     ```bash
     $ cd jsonrpc-benchmark/
     $ chmod a+x run.sh
-    $ URL="http://localhost:3030" ./run.sh
+    $ URL="http://localhost:3030" ./run.sh # to run each method sequentially
+    $ drill --benchmark benchmark.yml --stats # to run the methods concurrently
     ```
 
 ## Reasoning for chosen methods to benchmark

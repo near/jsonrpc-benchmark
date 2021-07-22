@@ -1,0 +1,40 @@
+---
+
+concurrency: 4
+base: 'http://34.91.236.50:3030'
+iterations: 3000
+rampup: 5
+
+plan:
+  - name: View access key list
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_access_key_list", "account_id": "nearoverflow.testnet", "finality": "final"}}'
+      headers:
+        Content-Type: 'application/json'
+
+  - name: View account
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_account", "account_id": "nearoverflow.testnet", "finality": "final"}}'
+      headers:
+        Content-Type: 'application/json'
+
+  - name: View call method
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "call_function", "account_id": "nearoverflow.testnet", "method_name": "list_questions", "args_base64": "", "finality": "final"}}'
+      headers:
+        Content-Type: 'application/json'
+
+  - name: View state
+    request:
+      url: /
+      method: POST
+      body: '{"jsonrpc": "2.0", "id": "dontcare", "method": "query", "params": {"request_type": "view_state", "account_id": "nearoverflow.testnet", "finality": "final", "prefix_base64": ""}}'
+      headers:
+        Content-Type: 'application/json'
+
